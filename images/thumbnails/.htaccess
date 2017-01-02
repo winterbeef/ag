@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME}        \.jpg$
+RewriteRule  ^(.*)$                    /includes/thumbnail.php?path=%{REQUEST_URI}

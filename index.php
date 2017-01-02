@@ -1,6 +1,7 @@
 <?php
-include '/home/allisongildersleeve/allisongildersleeve.com/includes/functions.php';
-$images = listImages('/home/allisongildersleeve/allisongildersleeve.com/paintings/');
+$image_dir = 'images';
+include 'includes/functions.php';
+$images = parse_images($image_dir);
 ?>
 <!doctype html>
 <html lang="en">
@@ -20,7 +21,6 @@ $images = listImages('/home/allisongildersleeve/allisongildersleeve.com/painting
     .fotorama__caption__wrap,
     .fotorama__caption {
         background-color: #f0f0f0;
-        /*box-shadow: 1px 1px 1px rgba(0,0,0,.5);*/
         font-size: .9em;
         font-style: italic;
         color:#999;
@@ -36,22 +36,17 @@ $images = listImages('/home/allisongildersleeve/allisongildersleeve.com/painting
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">Home</a>
+            <a class="navbar-brand" href="/">Allison Gildersleeve</a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li><a href="http://www.wikipedia.com">Wikipedia</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right" style="margin-right:1px;">
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Fun Stuff <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="https://gmail.com"><i class="fa fa-phone fa-fw"></i>Gmail</a></li>
-                        <li><a href="http://dogeweather.com/"><i class="fa fa-cloud fa-fw"></i> Such Weather</a></li>
-                        <li class="divider"></li>
-                        <li><a href="/help"><i class="fa fa-question-circle"></i> Help</a></li>
-                    </ul>
-                </li>
+            <ul class="nav navbar-nav navbar-right" style="margin-right:2px;">
+                <li><a href="/paintings">paintings</a></li>
+                <li><a href="/drawings">drawings</a></li>
+                <li><a href="/prints">prints</a></li>
+                <li><a href="/bio">bio</a></li>
+                <li><a href="/statement">statement</a></li>
+                <li><a href="/press">press</a></li>
+                <li><a href="/contact">contact</a></li>
             </ul>
         </div>
     </nav>
@@ -70,18 +65,13 @@ $images = listImages('/home/allisongildersleeve/allisongildersleeve.com/painting
                     data-keyboard="true"
                 >
 
-                    <?php
-                    $base = "http://allisongildersleeve.com/paintings/images/";
-                    ?>
                     <?php foreach($images as $img): ?>
                     <a
-                        href="<?=$base,'/', basename($img['file'])?>"
-                        data-caption="<?=htmlspecialchars($img['desc'])?>"
-                        id="<?=basename($img['file'])?>"
+                        href="<?=$image_dir, '/', basename($img->file)?>"
+                        data-caption="<?=htmlspecialchars($img->desc)?>"
+                        id="<?=basename($img->file)?>"
                     >
-                        <img
-                            src="<?=$base,'/thumbnails/',basename($img['file'])?>"
-                        >
+                        <img src="<?=$image_dir, '/thumbnails/', basename($img->file)?>">
                     </a>
                     <?php endforeach; ?>
 
