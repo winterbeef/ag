@@ -12,6 +12,7 @@ function parse_images($dir) {
         $img = (object) array(
             'url'     => substr($file, $root_len),
             'file'    => $file,
+            'base'    => basename($file),
             'desc'    => $desc,
             'th_url'  => substr($thumb, $root_len),
             'th_file' => $thumb,
@@ -21,6 +22,7 @@ function parse_images($dir) {
         );
         $images[] = $img;
     }
+    // echo '<pre>'; print_r($images); die('</pre>');
     return $images;
 }
 

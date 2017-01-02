@@ -54,24 +54,21 @@ $images = parse_images($image_dir);
     <div id="home-main" class="container-fluid">
         <div class="row">
             <div class="col-sm-12">
+                <!-- See: http://fotorama.io/customize/ -->
                 <div class="fotorama"
                     data-width="100%"
                     data-ratio="4/3"
                     data-nav="thumbs"
                     data-allowfullscreen="native"
-                    xxxxdata-fit="scaledown"
                     data-clicktransition="crossfade"
                     data-hash="true"
-                    data-keyboard="true"
-                >
-
+                    data-keyboard="true">
                     <?php foreach($images as $img): ?>
                     <a
-                        href="<?=$image_dir, '/', basename($img->file)?>"
+                        href="<?=$img->url?>"
                         data-caption="<?=htmlspecialchars($img->desc)?>"
-                        id="<?=basename($img->file)?>"
-                    >
-                        <img src="<?=$image_dir, '/thumbnails/', basename($img->file)?>">
+                        id="<?=$img->base?>">
+                        <img src="<?=$img->th_url?>">
                     </a>
                     <?php endforeach; ?>
 
