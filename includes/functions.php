@@ -22,7 +22,6 @@ function parse_images($dir) {
         );
         $images[] = $img;
     }
-    // echo '<pre>'; print_r($images); die('</pre>');
     return $images;
 }
 

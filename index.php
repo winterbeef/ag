@@ -1,5 +1,6 @@
 <?php
-$image_dir = 'images';
+$request = $_GET['action'] or $request = '.';
+$image_dir = $request . '/images';
 include 'includes/functions.php';
 $images = parse_images($image_dir);
 ?>
