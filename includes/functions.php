@@ -25,6 +25,15 @@ function parse_images($dir) {
     return $images;
 }
 
+function get_file($dir, $file) {
+    $file = $dir . '/' . $file;
+    if(@is_readable($file)) {
+        return @file_get_contents($file);
+    } else {
+        return false;
+    }
+}
+
 function H($str) {
     return htmlspecialchars($str);
 }

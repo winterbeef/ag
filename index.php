@@ -3,6 +3,8 @@ $request = $_GET['action'] or $request = '.';
 $image_dir = $request . '/images';
 include 'includes/functions.php';
 $images = parse_images($image_dir);
+
+$intro = get_file($request, 'intro.php');
 ?>
 <!doctype html>
 <html lang="en">
@@ -29,49 +31,17 @@ $images = parse_images($image_dir);
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/">Allison Gildersleeve</a>
-        </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right" style="margin-right:2px;">
-
-
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">work <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="/paintings/">paintings</a></li>
-                        <li><a href="/drawings/">drawings</a></li>
-                        <li><a href="/prints/">prints</a></li>
-                    </ul>
-                </li>
-
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">exhibitions <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="/exhibitions/unruly/">unruly</a></li>
-                        <li><a href="/exhibitions/closerthantheyappear/">closer than they appear</a></li>
-                        <li><a href="/exhibitions/crayfish/">crayfish</a></li>
-                        <li><a href="/exhibitions/dingo/">dingo</a></li>
-                    </ul>
-                </li>
-
-
-                <li><a href="/bio/">bio</a></li>
-                <li><a href="/statement/">statement</a></li>
-                <li><a href="/press/">press</a></li>
-                <li><a href="/contact/">contact</a></li>
-            </ul>
-        </div>
-    </nav>
+    <?php include 'navbar.php' ?>
 
     <div id="home-main" class="container-fluid">
+        <?php if ($intro): ?>
+        <div class="row">
+            <div class="col-sm-12">
+                <?php echo $intro ?>
+            </div><!-- .col-* -->
+        </div><!-- .row -->
+        <?php endif; ?>
+
         <div class="row">
             <div class="col-sm-12">
                 <!-- See: http://fotorama.io/customize/ -->
@@ -82,6 +52,7 @@ $images = parse_images($image_dir);
                     data-allowfullscreen="native"
                     data-clicktransition="crossfade"
                     data-hash="true"
+                    data-fit="scaledown"
                     data-keyboard="true">
                     <?php foreach($images as $img): ?>
                     <a
