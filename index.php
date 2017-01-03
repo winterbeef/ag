@@ -41,13 +41,32 @@ $images = parse_images($image_dir);
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right" style="margin-right:2px;">
-                <li><a href="/paintings">paintings</a></li>
-                <li><a href="/drawings">drawings</a></li>
-                <li><a href="/prints">prints</a></li>
-                <li><a href="/bio">bio</a></li>
-                <li><a href="/statement">statement</a></li>
-                <li><a href="/press">press</a></li>
-                <li><a href="/contact">contact</a></li>
+
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">work <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/paintings/">paintings</a></li>
+                        <li><a href="/drawings/">drawings</a></li>
+                        <li><a href="/prints/">prints</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">exhibitions <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/exhibitions/unruly/">unruly</a></li>
+                        <li><a href="/exhibitions/closerthantheyappear/">closer than they appear</a></li>
+                        <li><a href="/exhibitions/crayfish/">crayfish</a></li>
+                        <li><a href="/exhibitions/dingo/">dingo</a></li>
+                    </ul>
+                </li>
+
+
+                <li><a href="/bio/">bio</a></li>
+                <li><a href="/statement/">statement</a></li>
+                <li><a href="/press/">press</a></li>
+                <li><a href="/contact/">contact</a></li>
             </ul>
         </div>
     </nav>
