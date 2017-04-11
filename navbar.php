@@ -14,26 +14,29 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">paintings <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="/paintings/rabbits/">rabbits</a></li>
-                        <li><a href="/paintings/elephants/">elephants</a></li>
-                        <li><a href="/paintings/monkeys/">monkeys</a></li>
+                        <li><a href="/paintings/current/">current</a></li>
+                        <li><a href="/paintings/2015-2016/">2015-2016</a></li>
+                        <li><a href="/paintings/2013-2014/">2013-2014</a></li>
+                        <li><a href="/paintings/2009-2012/">2009-2012</a></li>
+                        <li><a href="/paintings/paintingsall/">all</a></li>
                     </ul>
                 </li>
 
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">drawings <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="/drawings/rabbits/">rabbits</a></li>
-                        <li><a href="/drawings/elephants/">elephants</a></li>
-                        <li><a href="/drawings/monkeys/">monkeys</a></li>
+                        <li><a href="/drawings/2017/">2017</a></li>
+                        <li><a href="/drawings/2016/">2016</a></li>
+                        <li><a href="/drawings/2015/">2015</a></li>
+                        <li><a href="/drawings/olderwork/">older work</a></li>
                     </ul>
                 </li>
                  <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">prints <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="/prints/rabbits/">rabbits</a></li>
-                        <li><a href="/prints/elephants/">elephants</a></li>
-                        <li><a href="/prints/monkeys/">monkeys</a></li>
+                        <li><a href="/prints/2012/">2012</a></li>
+                        <li><a href="/prints/2009/">2009</a></li>
+                 
                     </ul>
                 </li>
 
@@ -42,14 +45,14 @@
                     <ul class="dropdown-menu">
                         <li><a href="/exhibitions/unruly/">unruly</a></li>
                         <li><a href="/exhibitions/closerthantheyappear/">closer than they appear</a></li>
-                        <li><a href="/exhibitions/crayfish/">crayfish</a></li>
-                        <li><a href="/exhibitions/dingo/">dingo</a></li>
+                        <li><a href="/exhibitions/homewardbound/">homeward bound</a></li>
+                        <li><a href="/exhibitions/withinearshot/">within earshot</a></li>
                     </ul>
                 </li>
 
                 <li><a href="/bio/">bio</a></li>
-                <li><a href="/statement/">statement</a></li>
-                <li><a href="/press/">press</a></li>
+               
+             	<li><a href="/press/">press</a></li>
                 <li><a href="/contact/">contact</a></li>
             </ul>
         </div>

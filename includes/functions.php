@@ -28,7 +28,9 @@ function parse_images($dir) {
 function get_file($dir, $file) {
     $file = $dir . '/' . $file;
     if(@is_readable($file)) {
-        return @file_get_contents($file);
+        ob_start();
+        include $file;
+        return ob_get_clean();
     } else {
         return false;
     }
