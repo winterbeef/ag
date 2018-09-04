@@ -1,4 +1,4 @@
-<img src="contact.jpg" alt="Allison Gildersleeve Paintings" width="936" height="282" border="0">
+<img src="contact.jpg" alt="Allison Gildersleeve Paintings" width="1200" height="798" border="0">
 
 <p>copyright allison gildersleeve</p>
 <!-- Begin MailChimp Signup Form -->
